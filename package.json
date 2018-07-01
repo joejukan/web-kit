@@ -1,0 +1,43 @@
+{
+  "name": "@joejukan/web-kit",
+  "version": "0.0.0",
+  "description": "Web Development Kit",
+  "main": "lib/index",
+  "types": "index",
+  "scripts": {
+    "docs": "rm -rf docs/* && typedoc --out docs/ --readme README.md --mode file --module commonjs --target ES5 --exclude \"**/*+(index|.spec|.e2e).ts\" --excludePrivate --excludeProtected src/",
+    "clean": "rm -rf lib/*",
+    "build": "tsc",
+    "test": "./node_modules/.bin/jasmine-ts",
+    "preversion": "npm run clean && npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish --access public",
+    "patch": "npm version patch -m \"[PATCH] version (%s)\"",
+    "minor": "npm version minor -m \"[MINOR] version (%s)\"",
+    "major": "npm version major -m \"[MAJOR] version (%s)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joejukan/web-kit.git"
+  },
+  "keywords": [
+    "Web",
+    "Development",
+    "Kit",
+    "Tools"
+  ],
+  "author": "Joseph Eniojukan (https://github.com/joejukan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joejukan/web-kit/issues"
+  },
+  "homepage": "https://github.com/joejukan/web-kit#readme",
+  "dependencies": {
+    "@joejukan/argumenter": "1.0.3"
+  },
+  "devDependencies": {
+    "@types/jasmine": "2.8.8",
+    "jasmine-spec-reporter": "4.2.1",
+    "jasmine-ts": "0.2.1"
+  }
+}
