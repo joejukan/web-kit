@@ -3,7 +3,14 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
-## [0.0.1] - 2018-07-01
+## [0.1.0] - [FEATURE] Introduced Debouncing Classes (2020-04-05)
+* updated the documentation to [docute](https://www.npmjs.com/package/docute) to version `4.23.3`.
+* added the `IntervalRunner` class.
+* added the `TimeoutRunner` class.
+* added the `vh` function.
+* added the `vw` function.
+
+## [0.0.1] - [INIT] Initial Functionality (2018-07-01)
 * added `isBrowser` function.
 * added `isJson` function.
 * added `isPrimitive` function.

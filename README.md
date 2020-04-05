@@ -18,10 +18,10 @@ npm install @joejukan/web-kit
 **01)** **Joseph Eniojukan** - [joejukan](https://github.com/joejukan)<br/>
 
 ## ChangeLog
-[CHANGELOG.md](https://github.com/joejukan/web-kit/blob/master/CHANGELOG.md) file for details.
+[CHANGELOG.md](https://github.com/joejukan/web-kit/blob/master/docs/general/CHANGELOG.md) file for details.
 
 ## License
-This project is licensed under the ISC License - see the [LICENSE.md](https://github.com/joejukan/web-kit/blob/master/LICENSE.md) file for details
+This project is licensed under the ISC License - see the [LICENSE.md](https://github.com/joejukan/web-kit/blob/master/docs/general/LICENSE.md) file for details
 
 Copyright 2018 Joseph Eniojukan
 

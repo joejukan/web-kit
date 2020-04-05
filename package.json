@@ -5,7 +5,7 @@
   "main": "lib/index",
   "types": "index",
   "scripts": {
-    "docs": "rm -rf docs/* && typedoc --out docs/ --readme README.md --mode file --module commonjs --target ES5 --exclude \"**/*+(index|.spec|.e2e).ts\" --excludePrivate --excludeProtected src/",
+    "docs": "serve docs/",
     "clean": "rm -rf lib/*",
     "build": "tsc",
     "test": "./node_modules/.bin/jasmine-ts",
