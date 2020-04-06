@@ -3,6 +3,22 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.2.0] - [FEATURE] Introduce a Schema Based Definition Functionality for Data Structures (2020-04-06)
+* added the `Cardinality` enumeration.
+* added the `Type` interface.
+* added the `IField` interface.
+* added the `ISchema` interface.
+* added the `schemas` global constant.
+* added the `addSchema` function.
+* added the `hasSchema` function.
+* added the `getSchema` function.
+* added the `addField` function.
+* added the `getField` function.
+* added the `hasField` function.
+* added the `getFields` function.
+* added the `define` function.
+* updated unit testing to use [jest](https://www.npmjs.com/package/jest) version `25.2.7`.
+
 ## [0.1.0] - [FEATURE] Introduced Debouncing Classes (2020-04-05)
 * updated the documentation to [docute](https://www.npmjs.com/package/docute) to version `4.23.3`.
 * added the `IntervalRunner` class.

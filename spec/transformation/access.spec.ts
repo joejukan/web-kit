@@ -14,28 +14,28 @@ let tested = {
 }
 
 describe(`access unit tests`, () => {
-    it(`access string at level 0`, ()=>{
+    test(`access string at level 0`, ()=>{
         expect(access(tested, 'title')).toEqual('Engineer');
     });
 
-    it(`access number at level 0`, ()=>{
+    test(`access number at level 0`, ()=>{
         expect(access(tested, 'years')).toEqual(12);
     });
 
-    it(`access string at level 1`, ()=>{
+    test(`access string at level 1`, ()=>{
         expect(access(tested, 'person.name')).toEqual('John Doe');
     });
 
-    it(`access number at level 1`, ()=>{
+    test(`access number at level 1`, ()=>{
         expect(access(tested, 'person.age')).toEqual(45);
     });
 
-    it(`access string at level 2`, ()=>{
+    test(`access string at level 2`, ()=>{
         expect(access(tested, 'person.address.street')).toEqual('3902 Main Street');
         expect(access(tested, 'person.address.city')).toEqual('New York');
     });
 
-    it(`access number at level 2`, ()=>{
+    test(`access number at level 2`, ()=>{
         expect(access(tested, 'person.address.zip')).toEqual(90210);
     });
 })
