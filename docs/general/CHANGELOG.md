@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.4.0] - [FEATURE] Introduced Scheduling Capability (2020-10-10)
+* added the `isNumeric` function.
+* added the `@Schedule` decorator.
+* added the `ITimer` interface.
+* added the `timers` constant.
+* added the `useTimers` function.
+
 ## [0.3.0] - [FEATURE] Introduced isEmpty, Between, Capitalize, Epoch and Wait Functions (2020-10-10)
 * added the `isEmpty` function.
 * added the `between` function.

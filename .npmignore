@@ -13,3 +13,4 @@ jasmine.json
 .git/
 .vscode/
 .travis.yml
+*.env*

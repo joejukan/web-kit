@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@types/jest": "26.0.14",
+    "dotenv": "8.2.0",
     "jest": "26.5.2",
     "ts-jest": "26.4.1",
     "typescript": "4.0.3"
@@ -45,7 +46,7 @@
     "preset": "ts-jest",
     "testRegex": "(/spec/.*\\.(test|spec)\\.tsx?$|(\\.|/)(test|spec))\\.tsx?$",
     "setupFiles": [
-      "<rootDir>/spec/helpers/env.js"
+      "<rootDir>/spec/helpers/env.ts"
     ],
     "globals": {
       "ts-jest": {

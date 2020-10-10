@@ -5,6 +5,7 @@ export * from './conversion';
 export * from './decoration';
 export * from './enumeration';
 export * from './evaluation';
+export * from './execution';
 export * from './globalization';
 export * from './identification';
 export * from './reflection';
