@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.3.0] - [FEATURE] Introduced isEmpty, Between, Capitalize, Epoch and Wait Functions (2020-10-10)
+* added the `isEmpty` function.
+* added the `between` function.
+* added the `capitalize` function.
+* added the `epoch` function.
+* added the `wait` function.
+
 ## [0.2.0] - [FEATURE] Introduce a Schema Based Definition Functionality for Data Structures (2020-04-06)
 * added the `Cardinality` enumeration.
 * added the `Type` interface.

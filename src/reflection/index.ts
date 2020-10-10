@@ -1,5 +1,6 @@
 export * from './access';
 export * from './camel';
+export * from './capitalize';
 export * from './clear';
 export * from './clone';
 export * from './copy';
