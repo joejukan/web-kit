@@ -39,8 +39,12 @@ export function define(...args) {
     }
   });
 
-  if (construct) {
+  if (fields.length > 0) {
     return to;
+  } else if(construct) {
+    return Object.assign(to, from);
+  } else {
+    return from;
   }
 
 }
