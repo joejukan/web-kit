@@ -1,4 +1,5 @@
 export * from './is-browser';
+export * from './is-dom';
 export * from './is-empty';
 export * from './is-json';
 export * from './is-numeric';

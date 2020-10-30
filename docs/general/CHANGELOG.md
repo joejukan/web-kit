@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.5.0] - [FEATURE] Introduced isDOM Function (2020-10-29)
+* added the `isDOM` function.
+
+## [0.4.1] - [FIX] Ensure that Define Returns an Non Empty Object if No Fields are Defined (2020-10-25)
+* modifed the `define` function to return the `from` parameter object if no fields are defined.
+
 ## [0.4.0] - [FEATURE] Introduced Scheduling Capability (2020-10-10)
 * added the `isNumeric` function.
 * added the `@Schedule` decorator.
