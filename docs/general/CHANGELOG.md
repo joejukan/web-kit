@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.6.0] - [FEATURE] Introduced the First, Filter and Contains Functions (2020-11-03)
+* added the `first` function.
+* added the `filter` function.
+* added the `contains` function.
+* modified the `ok` function to return `false` if a `NaN` object is detected.
+* exposed the `Argumenter` class so that it can be imported directly from this module.
+
 ## [0.5.0] - [FEATURE] Introduced isDOM Function (2020-10-29)
 * added the `isDOM` function.
 

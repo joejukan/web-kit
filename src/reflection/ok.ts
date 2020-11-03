@@ -1,22 +1,29 @@
 export function ok(value): boolean {
-    if(typeof value === 'undefined')
+    if(typeof value === 'undefined'){
         return false;
-
-    else if(value === null)
+    }
+    
+    else if (value === null){
         return false;
+    }
+        
 
-    else if(typeof value === 'number')
+    else if (typeof value === 'number') {
         return true;
-
-    else if(typeof value === 'boolean')
+}
+    else if (typeof value === 'boolean') {
         return value;
+    }
 
-    else if(typeof value === 'string')
+    else if (typeof value === 'string') {
         return value.trim().length > 0;
+    }
 
-    else if(typeof value === 'object'){
-        if(isNaN(value))
+    else if(typeof value === 'object') {
+        if (value === NaN){
             return false;
+        }
+        return true; 
     }
 
     return true;
