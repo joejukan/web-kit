@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/joejukan/web-kit#readme",
   "dependencies": {
-    "@joejukan/argumenter": "1.0.5"
+    "@joejukan/argumenter": "1.1.0"
   },
   "devDependencies": {
     "@types/jest": "26.0.14",
