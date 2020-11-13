@@ -4,15 +4,16 @@ class Person {
   @Field('String')
   public firstName: string;
 
-  @Field('String')
+  @Field(String)
   public lastName: string;
 
   @Field('Date')
   public dob: Date;
 
-  @Field('Number')
+  @Field(Number)
   public weight: number;
 }
+
 describe('define unit tests', () => {
   test('define type with raw object', () => {
     const object = <Person> { firstName: 'Jane', lastName: 'Doe', dob: new Date('1988-10-11'), weight: 130 };
