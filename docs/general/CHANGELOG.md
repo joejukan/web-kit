@@ -3,7 +3,15 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
-## [0.6.2] - [FEATURE] Add @Field() Decorator Support for Class Type (2020-11-12)
+## [0.6.3] - [FEATURE] Added @Ignore() Decorator Support (2021-01-15)
+* added the `@Ignore()` decorator to identify fields that should be ignored.
+* added the `pick()` function to allow fields to be identify for copying.
+* modified the `filter()` function to ensure that an array exists before performing filtering on it.
+* modified the `getSchema()` function to to find `schemas` by the `type` property.
+* modified the `addField()` function to modify existing fields.
+* modified the `define()` function to ignore any fields annotated with the `@Ignore()` decorator.
+
+## [0.6.2] - [FEATURE] Added @Field() Decorator Support for Class Type (2020-11-12)
 * added overloads to `@Field()` to handle `Type` parameters.
 
 ## [0.6.1] - [FEATURE] Updated Augmenter Module (2020-11-09)

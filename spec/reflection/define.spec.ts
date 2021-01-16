@@ -1,4 +1,4 @@
-import { define, Field } from "../../src";
+import { define, Field, Ignore } from "../../src";
 
 class Person {
   @Field('String')
@@ -6,6 +6,10 @@ class Person {
 
   @Field(String)
   public lastName: string;
+
+  @Ignore()
+  @Field(String)
+  public sin: string;
 
   @Field('Date')
   public dob: Date;
@@ -16,7 +20,7 @@ class Person {
 
 describe('define unit tests', () => {
   test('define type with raw object', () => {
-    const object = <Person> { firstName: 'Jane', lastName: 'Doe', dob: new Date('1988-10-11'), weight: 130 };
+    const object = <Person> { firstName: 'Jane', lastName: 'Doe', sin: '999 999 999', dob: new Date('1988-10-11'), weight: 130 };
     const person = define(Person, object);
     
     expect(person).toBeDefined();
@@ -24,5 +28,6 @@ describe('define unit tests', () => {
     expect(person.lastName).toEqual(object.lastName);
     expect(person.weight).toEqual(object.weight);
     expect(person.dob).toEqual(object.dob);
+    expect(person.sin).toBeUndefined();
   });
 })

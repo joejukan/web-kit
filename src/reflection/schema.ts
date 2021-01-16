@@ -1,7 +1,9 @@
 import { Argumenter } from '@joejukan/argumenter';
 import { IField, ISchema, Type } from '../abstraction';
 import { schemas } from '../globalization';
+import { contains } from './contains';
 import { ok } from './ok';
+
 
 export function addSchema(type: Type) {
   if (!hasSchema(type)){
@@ -17,7 +19,7 @@ export function addSchema(type: Type) {
 
 export function hasSchema(type: Type): boolean {
   if (type){
-    return schemas.filter(s => s.type === type || s.name === type.name).length > 0;
+    return contains(schemas, (s) => s.type ? s.type === type : s.name === type.name);
   }
   return false;
 }
@@ -29,22 +31,34 @@ export function getSchema(...args) {
   const type: Type = a.function;
   const name = a.string || (type ? type.name : null);
 
-  if (ok(name)) {
-    for (let i = 0; i < schemas.length; i++) {
+  for (let i = 0; i < schemas.length; i++) {
+    if (type) {
+      if (schemas[i].type === type) {
+        return schemas[i];
+      }
+    } else if (ok(name)) {
       if (schemas[i].name === name) {
         return schemas[i];
       }
     }
   }
-  
   return null;
 }
 
 export function addField(field: IField, type: Type) {
-  if (!hasField(field.name, type) && !hasField(field.alias, type)) {
+  const f = getField(field.name, type) || getField(field.alias, type);
+  if (!f) {
     addSchema(type);
     let schema = getSchema(type);
     schema.fields.push(field);
+  } else {
+    // modify existing fields with new values
+    const keys: Array<string> = ['alias', 'cardinality', 'symbol', 'ignore'] as Array<keyof IField>;
+    keys.forEach(key => {
+      if (typeof field[key] !== 'undefined' && field[key] !== null) {
+        f[key] = field[key];
+      }
+    })
   }
 }
 

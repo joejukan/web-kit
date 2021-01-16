@@ -12,6 +12,7 @@ export * from './first';
 export * from './inject';
 export * from './kebab';
 export * from './ok';
+export * from './pick';
 export * from './plural';
 export * from './properties';
 export * from './schema';

@@ -15,12 +15,12 @@ export function define(...args) {
 
   const fields = getFields(to);
 
-  fields.forEach(({ alias, cardinality, name, symbol }) => {
+  fields.filter(({ ignore }) => !ignore).forEach(({ alias, cardinality, name, symbol }) => {
     const key = ok(alias) ? alias : name;
     const value = from[key];
     const schema = getSchema(symbol);
     const type = <Type> (schema ? schema.type : null);
-    
+
     if (typeof value !== 'undefined' && value != null) {
       // handle number
       if (symbol === 'Number') {
@@ -32,7 +32,7 @@ export function define(...args) {
       } else if (symbol === 'Date') {
         to[name] = Array.isArray(value) ? value.map(v => toDate(v)) : toDate(value);
       } else if (type && value) {
-        to[name] = Array.isArray(value) ? value.map(v => new type(v)) : new type(value);
+        to[name] = Array.isArray(value) ? value.map(v => define(v, type)) : define(value, type);
       } else if (ok(value)) {
         to[name] = value;
       }
