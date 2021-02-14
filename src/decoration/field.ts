@@ -1,7 +1,7 @@
 import { Argumenter } from '@joejukan/argumenter';
 import { IField, Type } from '../abstraction';
 import { Cardinality } from '../enumeration';
-import { addField } from '../reflection';
+import { addField, ok } from '../reflection';
 
 export function Field(type: Type): PropertyDecorator;
 export function Field(symbol: string): PropertyDecorator;
@@ -16,12 +16,15 @@ export function Field(symbol: string, cardinality: Cardinality, alias: string): 
 export function Field(...args) {
   const a = new Argumenter(args);
   let symbol = a.string;
-  const alias = a.string;
+  let alias = a.string;
   const type = a.function as Type;
   
   const cardinality: Cardinality = a.number;
 
-  if (!symbol && type) {
+  if (type) {
+    if (!ok(alias)) {
+      alias = symbol;
+    }
     symbol = type.name;
   }
 

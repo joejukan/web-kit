@@ -67,6 +67,8 @@ export function getField(name: string, type: Type) {
   return fields.length > 0 ? fields[0] : null;
 }
 
+export function getFields<T>(target: T): Array<IField>;
+export function getFields<T>(type: Type<T>): Array<IField>;
 export function getFields(...args) {
   const argue = new Argumenter(args);
 

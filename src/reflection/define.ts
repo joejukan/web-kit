@@ -5,7 +5,7 @@ import { getFields, getSchema, ok } from '../reflection';
 
 export function define<T=any>(type: Type<T>, object: Object): T;
 export function define<T=any>(object: Object, type: Type<T>): T;
-export function define<T>(from: Object, type: T);
+export function define<T>(from: Object, to: T);
 export function define(...args) {
   const a = new Argumenter(args);
 

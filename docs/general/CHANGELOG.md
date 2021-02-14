@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.7.0] - [FEATURE] Added serialize() Function (2021-02-14)
+* modified the `@Field()` to properly support the override with the constructor and alias.
+* added overrides to the `getFields()` function that accept an object parameter and a constructor type parameter.
+* added the `serialize()` function to input an object, whose class is decorated by `@Field()`, and returns an basic `Object` with the aliases.
+
 ## [0.6.3] - [FEATURE] Added @Ignore() Decorator Support (2021-01-15)
 * added the `@Ignore()` decorator to identify fields that should be ignored.
 * added the `pick()` function to allow fields to be identify for copying.
