@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.7.1] - [FEATURE] Added inViewPort() Function (2021-05-15)
+* added the `inViewPort()` function to determine if an DOM element is visible in the browser viewport.
+
 ## [0.7.0] - [FEATURE] Added serialize() Function (2021-02-14)
 * modified the `@Field()` to properly support the override with the constructor and alias.
 * added overrides to the `getFields()` function that accept an object parameter and a constructor type parameter.
