@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.7.3] - [SECURITY] Secured Dependency Vulnerabilities (2021-07-03)
+* upgraded the `hosted-git-info` module to version `2.8.9`.
+* upgraded the `lodash` module to version `4.17.21`.
+* upgraded the `ws` module to version `7.5.1`.
+* modified the `startTimer()` function to support both `synchronous` and `asynchronous` callbacks.
+
 ## [0.7.2] - [IMPROVE] Modified useTimers() Function to Clear Existing Interval Handles (2021-07-03)
 * added the `startTimer()` function to start a specific timer.
 * added the `stopTimer()` function to stop a specific timer.
