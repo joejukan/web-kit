@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.7.2] - [IMPROVE] Modified useTimers() Function to Clear Existing Interval Handles (2021-07-03)
+* added the `startTimer()` function to start a specific timer.
+* added the `stopTimer()` function to stop a specific timer.
+* modified the `useTimers()` function to clear each timers existing interval.
+
 ## [0.7.1] - [FEATURE] Added inViewPort() Function (2021-05-15)
 * added the `inViewPort()` function to determine if an DOM element is visible in the browser viewport.
 
