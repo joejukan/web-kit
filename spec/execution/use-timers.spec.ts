@@ -29,7 +29,7 @@ describe(`useTimers unit tests`, () => {
     new Scheduler();
   });
 
-  test(`useTimers runs methods`, async (done) => {
+  test(`useTimers runs methods`, async () => {
     useTimers('on');
     await wait(1050);
     useTimers('off');
@@ -37,6 +37,5 @@ describe(`useTimers unit tests`, () => {
     expect(tenthMock).toBeCalledTimes(10);
     expect(fifthMock).toBeCalledTimes(5);
     expect(halfMock).toBeCalledTimes(2);
-    done();
   }, timeout)
 });

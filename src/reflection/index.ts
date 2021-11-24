@@ -17,3 +17,4 @@ export * from './plural';
 export * from './properties';
 export * from './schema';
 export * from './singular';
+export * from './snake';

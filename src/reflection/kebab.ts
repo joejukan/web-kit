@@ -1,7 +1,7 @@
 import {Argumenter} from "@joejukan/argumenter";
 
 export function kebab (value: string): string;
-export function kebab (type: new () => any)
+export function kebab (type: new () => any): string;
 export function kebab (...args): string {
     let argue = new Argumenter(args);
     let string = argue.string;
