@@ -1,6 +1,6 @@
 {
   "name": "@joejukan/web-kit",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Web Development Kit",
   "main": "lib/index",
   "types": "index",
@@ -51,7 +51,10 @@
     "setupFiles": [
       "<rootDir>/spec/helpers/env.ts"
     ],
-    "reporters": [ "default", "jest-junit" ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
     "globals": {
       "ts-jest": {
         "diagnostics": {
