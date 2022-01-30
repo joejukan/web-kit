@@ -4,6 +4,7 @@ on:
   push:
     branches: [ master, '**' ]
     paths: [ '**.ts', 'package.json', 'tsconfig.json', 'tsconfig.*.json' ]
+    tags: [ '**' ]
   pull_request:
     branches: [ master ]
 
