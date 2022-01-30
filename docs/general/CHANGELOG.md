@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [0.8.1] - [FIX] #11 Properties Function Returns an Object's the `constructor` property name (2022-01-30)
+* added version `2.5.1` of the `prettier` module to provide a consistent formatting of the **typescript** code.
+* formated all **typescript** files, excluding **index.ts**, in the `src` and `spec` directories.
+* added the `node.js.yml` file to allow github actions to execute tests during git commits.
+* modified the `properties()` function to filter out the `constructor` property name from the results.
+* added version `13.0.0` of the `jest-junit` module to provide an xml report to be published by github workflows.
+
 ## [0.8.0] - [FEATURE] Added the Primitive Type (2021-11-24)
 * added the `Primitive` type to represent a `string`, `number` or `boolean` type.
 * added the `snake()` function to convert camel or kebab case to snake case.
