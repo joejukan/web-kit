@@ -1,5 +1,5 @@
 # Web Development Kit
-[![Build Status](https://img.shields.io/github/workflow/status/joejukan/web-kit/ci/master.svg?label=node)](https://github.com/joejukan/web-kit/actions?query=workflow%3Aci)
+[![Build Status](https://github.com/joejukan/web-kit/actions/workflows/node.js.yml/badge.svg)](https://github.com/joejukan/web-kit/actions?query=workflow%3Aci)
 [![NPM Version](http://img.shields.io/npm/v/@joejukan/web-kit.svg?style=flat)](https://www.npmjs.org/package/@joejukan/web-kit)
 [![NPM Downloads](https://img.shields.io/npm/dm/@joejukan/web-kit.svg?style=flat)](https://npmcharts.com/compare/@joejukan/web-kit?minimal=true)
 
