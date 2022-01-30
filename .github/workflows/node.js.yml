@@ -3,6 +3,7 @@ name: Node.js CI
 on:
   push:
     branches: [ master, '**' ]
+    paths: [ '**.ts', 'package.json', 'tsconfig.json', 'tsconfig.*.json' ]
   pull_request:
     branches: [ master ]
 
