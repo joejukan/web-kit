@@ -22,7 +22,7 @@ export function properties(...args): Array<string> {
     }
   }
 
-  return props.reverse();
+  return props.reverse().filter((k) => k !== 'constructor');
 }
 /** @hidden */
 function keyOk(key: string) {
