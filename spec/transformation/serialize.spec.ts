@@ -20,7 +20,7 @@ class Address {
 class Person {
   @Field(String, 'first_name')
   public firstName: string;
-  
+
   @Field(String, 'last_name')
   public lastName: string;
 

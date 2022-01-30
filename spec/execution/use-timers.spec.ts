@@ -6,7 +6,6 @@ const fifthMock = jest.fn();
 const halfMock = jest.fn();
 
 class Scheduler {
-
   @Schedule(100)
   private tenth() {
     tenthMock();
@@ -21,7 +20,6 @@ class Scheduler {
   private half() {
     halfMock();
   }
-
 }
 
 describe(`useTimers unit tests`, () => {
@@ -29,13 +27,17 @@ describe(`useTimers unit tests`, () => {
     new Scheduler();
   });
 
-  test(`useTimers runs methods`, async () => {
-    useTimers('on');
-    await wait(1050);
-    useTimers('off');
-    await wait(1050);
-    expect(tenthMock).toBeCalledTimes(10);
-    expect(fifthMock).toBeCalledTimes(5);
-    expect(halfMock).toBeCalledTimes(2);
-  }, timeout)
+  test(
+    `useTimers runs methods`,
+    async () => {
+      useTimers('on');
+      await wait(1050);
+      useTimers('off');
+      await wait(1050);
+      expect(tenthMock).toBeCalledTimes(10);
+      expect(fifthMock).toBeCalledTimes(5);
+      expect(halfMock).toBeCalledTimes(2);
+    },
+    timeout
+  );
 });

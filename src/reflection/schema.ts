@@ -4,22 +4,21 @@ import { schemas } from '../globalization';
 import { contains } from './contains';
 import { ok } from './ok';
 
-
 export function addSchema(type: Type) {
-  if (!hasSchema(type)){
+  if (!hasSchema(type)) {
     if (type) {
       schemas.push({
         name: type.name,
         type,
-        fields: []
-      })
+        fields: [],
+      });
     }
   }
 }
 
 export function hasSchema(type: Type): boolean {
-  if (type){
-    return contains(schemas, (s) => s.type ? s.type === type : s.name === type.name);
+  if (type) {
+    return contains(schemas, (s) => (s.type ? s.type === type : s.name === type.name));
   }
   return false;
 }
@@ -54,16 +53,16 @@ export function addField(field: IField, type: Type) {
   } else {
     // modify existing fields with new values
     const keys: Array<string> = ['alias', 'cardinality', 'symbol', 'ignore'] as Array<keyof IField>;
-    keys.forEach(key => {
+    keys.forEach((key) => {
       if (typeof field[key] !== 'undefined' && field[key] !== null) {
         f[key] = field[key];
       }
-    })
+    });
   }
 }
 
 export function getField(name: string, type: Type) {
-  const fields = getFields(type).filter(f => (f.name === name || f.alias === name) && ok(name));
+  const fields = getFields(type).filter((f) => (f.name === name || f.alias === name) && ok(name));
   return fields.length > 0 ? fields[0] : null;
 }
 
@@ -80,5 +79,5 @@ export function getFields(...args) {
 }
 
 export function hasField(name: string, type: Type) {
-  return getFields(type).filter(f => (f.name === name || f.alias === name) && ok(name)).length > 0;
+  return getFields(type).filter((f) => (f.name === name || f.alias === name) && ok(name)).length > 0;
 }

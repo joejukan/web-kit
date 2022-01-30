@@ -1,25 +1,20 @@
 import { Schedule, timers } from '../../src';
 
-
 class Scheduler {
-
   @Schedule(1000)
-  private start() {
-  }
+  private start() {}
   @Schedule(`INTERVAL`)
-  private stop() {
-  }
+  private stop() {}
 }
 
 describe(`schedule unit tests`, () => {
-
   beforeAll(() => {
     new Scheduler();
   });
 
   test(`schedule decoration results in a timer`, () => {
     expect(timers.length).toBe(2);
-  })
+  });
 
   test(`schedule sets the timer type class properly`, () => {
     expect(timers[0].typeName).toBe(`Scheduler`);
@@ -36,4 +31,4 @@ describe(`schedule unit tests`, () => {
     expect(timers[1].envProperty).toBe('INTERVAL');
     expect(timers[1].interval).toBe(parseInt(process.env.INTERVAL));
   });
-})
+});

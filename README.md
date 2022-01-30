@@ -1,5 +1,5 @@
 # Web Development Kit
-[![Build Status](https://api.travis-ci.org/joejukan/web-kit.svg?branch=master)](http://travis-ci.org/joejukan/web-kit)
+[![Build Status](https://img.shields.io/github/workflow/status/joejukan/web-kit/ci/master.svg?label=linux)](https://github.com/joejukan/web-kit/actions?query=workflow%3Aci)
 [![NPM Version](http://img.shields.io/npm/v/@joejukan/web-kit.svg?style=flat)](https://www.npmjs.org/package/@joejukan/web-kit)
 [![NPM Downloads](https://img.shields.io/npm/dm/@joejukan/web-kit.svg?style=flat)](https://npmcharts.com/compare/@joejukan/web-kit?minimal=true)
 

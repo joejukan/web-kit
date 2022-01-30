@@ -13,12 +13,10 @@ export function json(text: string): any;
  */
 export function json(object: any): string;
 
-export function json(value){
-    if(typeof value === 'string'){
-        return JSON.parse(value);
-    }
-
-    else if(value instanceof Object){
-        return JSON.stringify(value,undefined,3);
-    }
+export function json(value) {
+  if (typeof value === 'string') {
+    return JSON.parse(value);
+  } else if (value instanceof Object) {
+    return JSON.stringify(value, undefined, 3);
+  }
 }

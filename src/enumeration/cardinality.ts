@@ -1,3 +1,4 @@
 export enum Cardinality {
-  SINGULAR, PLURAL
+  SINGULAR,
+  PLURAL,
 }

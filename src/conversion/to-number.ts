@@ -18,11 +18,9 @@ export function toNumber(...args) {
     return boolean ? 1 : 0;
   } else if (date) {
     return date.getTime();
-  } else if(ok(string)) {
+  } else if (ok(string)) {
     try {
       return /\./.test(string) ? parseFloat(string) : parseInt(string);
-    } catch(err) {
-
-    }
+    } catch (err) {}
   }
 }

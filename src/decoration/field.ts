@@ -18,7 +18,7 @@ export function Field(...args) {
   let symbol = a.string;
   let alias = a.string;
   const type = a.function as Type;
-  
+
   const cardinality: Cardinality = a.number;
 
   if (type) {
@@ -30,6 +30,6 @@ export function Field(...args) {
 
   return ({ constructor: type }: Object, name: string) => {
     const field: IField = { alias, cardinality, name, symbol };
-    addField(field, <Type> type);
-  }
+    addField(field, <Type>type);
+  };
 }

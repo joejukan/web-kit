@@ -22,7 +22,7 @@ describe(`isEmpty unit tests`, () => {
 
   test(`detect non-empty array`, () => {
     expect(isEmpty([0])).toBeFalsy();
-    expect(isEmpty([3,4])).toBeFalsy();
+    expect(isEmpty([3, 4])).toBeFalsy();
     expect(isEmpty([{ age: 5 }])).toBeFalsy();
   });
 });

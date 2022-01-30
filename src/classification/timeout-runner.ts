@@ -10,7 +10,7 @@ export class TimeoutRunner {
   constructor(callback: Function, timeout: number);
   constructor(timeout: number, callback: Function);
   constructor(...args) {
-    const { number: timeout, function: callback} = new Argumenter(args);
+    const { number: timeout, function: callback } = new Argumenter(args);
     this.timeout = ok(timeout) ? timeout : 1000;
     this.callback = callback;
   }

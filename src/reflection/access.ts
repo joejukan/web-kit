@@ -6,19 +6,18 @@
  * @returns {any} The nested property value.
  */
 export function access(object, path: string): any {
-    // TODO: support array accessor
-    var paths = path.split('.')
-    let current = object;
+  // TODO: support array accessor
+  var paths = path.split('.');
+  let current = object;
 
-    for (let i = 0; i < paths.length; i++) {
-        let path = paths[i];
-        if (current[path] === undefined) {
-            return undefined;
-        } 
-        else {
-            current = current[path];
-        }
+  for (let i = 0; i < paths.length; i++) {
+    let path = paths[i];
+    if (current[path] === undefined) {
+      return undefined;
+    } else {
+      current = current[path];
     }
-    
-    return current;
+  }
+
+  return current;
 }

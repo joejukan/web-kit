@@ -4,9 +4,8 @@
  * @returns {boolean} true if called in a browser environment, false if not.
  */
 export function isBrowser(): boolean {
-    try{
-        return typeof window !== 'undefined';
-    }
-    catch(err){}
-    return false;
+  try {
+    return typeof window !== 'undefined';
+  } catch (err) {}
+  return false;
 }

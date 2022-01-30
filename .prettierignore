@@ -1,0 +1,7 @@
+*.html
+*.htm
+*.json
+*.js
+*.css
+*.scss
+index.ts

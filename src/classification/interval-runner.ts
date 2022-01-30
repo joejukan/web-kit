@@ -1,7 +1,7 @@
 import { Argumenter } from '@joejukan/argumenter';
 import { ok } from '../reflection';
 
-type CallbackType = (...args) => boolean|void;
+type CallbackType = (...args) => boolean | void;
 
 export class IntervalRunner {
   private handle = null;
@@ -32,7 +32,7 @@ export class IntervalRunner {
   }
 
   public immediate(...args) {
-    if(this.callback(...args)) {
+    if (this.callback(...args)) {
       this.cancel();
     }
     this.increment();

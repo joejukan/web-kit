@@ -4,7 +4,6 @@ import { timers } from '../globalization';
 import { uuid } from '../identification';
 import { ok } from '../reflection';
 
-
 export function Schedule(interval: number);
 export function Schedule(envProperty: string);
 export function Schedule(interval: number, envProperty: string);
@@ -23,12 +22,12 @@ export function Schedule(...args) {
     }
   }
 
-  return function(target: any, methodName: string, descriptor: PropertyDescriptor) {
+  return function (target: any, methodName: string, descriptor: PropertyDescriptor) {
     const method: Function = descriptor.value;
-    const type: { new (...args): any} = <any> target['constructor'];
+    const type: { new (...args): any } = <any>target['constructor'];
     const typeName = type.name;
 
     timers.push({ id, interval, envProperty, target, type, method, typeName, methodName });
     return descriptor;
-  }
+  };
 }

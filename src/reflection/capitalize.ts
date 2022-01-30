@@ -1,6 +1,6 @@
-import { ok } from "./ok";
+import { ok } from './ok';
 
-export function capitalize (text: string): string {
+export function capitalize(text: string): string {
   if (ok(text)) {
     return text.replace(/^[a-z]/, (v) => v.toUpperCase());
   }

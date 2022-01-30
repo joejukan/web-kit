@@ -3,7 +3,7 @@ import { ok } from '../reflection/ok';
 
 export function isEmpty(value: string): boolean;
 export function isEmpty(value: Object): boolean;
-export function isEmpty<T=any>(value: Array<T>): boolean;
+export function isEmpty<T = any>(value: Array<T>): boolean;
 export function isEmpty(...args) {
   const a = new Argumenter(args);
   const { string, number, object, array } = a;
@@ -12,8 +12,7 @@ export function isEmpty(...args) {
     return !ok(string);
   } else if (typeof number === 'number') {
     return !ok(number);
-  }
-  else if (array) {
+  } else if (array) {
     for (let i = 0; i < array.length; i++) {
       if (!isEmpty(array[i])) {
         return false;
