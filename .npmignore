@@ -15,3 +15,4 @@ jasmine.json
 .vscode/
 .travis.yml
 *.env*
+reports/
